@@ -21,7 +21,7 @@
   <h2>1. Who we are</h2>
   <p>
     Bulk Exporter for Jira ("the App") is developed and distributed by
-    Alessandro Greco ("we", "us"), contactable at
+    Grounded ("we", "us"), contactable at
     <a href="mailto:support@groundedwp.com">support@groundedwp.com</a>.
   </p>
   <p>
@@ -89,14 +89,14 @@
       <td>Deleted immediately after that batch is rendered</td>
     </tr>
     <tr>
-      <td>Job state (query text, progress counters, status)</td>
+      <td>Job state (progress counters, status)</td>
       <td>Forge Key-Value Store</td>
-      <td>Kept so you can check progress; contains no issue content</td>
+      <td>Kept so you can check progress. Contains no issue content and no user identifiers; the query text is discarded when the export completes</td>
     </tr>
     <tr>
       <td>The finished export file</td>
       <td>Forge Object Store</td>
-      <td>Automatically deleted after 7 days</td>
+      <td>Automatically deleted after 12 hours</td>
     </tr>
   </table>
   <p>
@@ -114,6 +114,7 @@
     <li>We do not use your data to train machine learning models.</li>
     <li>We do not sell, rent or share your data with anyone.</li>
     <li>We do not place cookies. The App's interface uses no browser storage.</li>
+    <li>We do not record who ran an export. No account identifier is stored.</li>
   </ul>
 
   <h2>6. Support communications</h2>
