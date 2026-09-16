@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bulk Exporter for Jira</title>
+  <meta name="description" content="Export Jira issues to PDF, Excel and CSV without the 1,000-issue limit. Runs entirely on Atlassian infrastructure." />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<main>
+  <h1>Bulk Exporter for Jira</h1>
+  <p class="lead">
+    Export Jira issues to PDF, Excel and CSV. No 1,000-issue limit. Tables,
+    panels, formatting and attachments come through intact.
+  </p>
+
+  <div class="callout">
+    <strong>Runs on Atlassian.</strong> The app uses only Atlassian-hosted
+    compute and storage and declares no external network egress. Your issue
+    data never leaves Atlassian's cloud.
+  </div>
+
+  <h2>What it does</h2>
+  <ul>
+    <li><strong>No issue cap.</strong> Jira's built-in export stops at 1,000
+        issues. This one does not stop.</li>
+    <li><strong>Faithful PDF.</strong> Rich text, tables, panels, code blocks,
+        lists, mentions and images are rendered, not flattened to plain text.</li>
+    <li><strong>Attachments included.</strong> Images embedded in a description
+        are rendered in place; every other attachment is listed with its name,
+        type and size.</li>
+    <li><strong>Excel and CSV.</strong> One row per issue, with autofilter,
+        sensible column widths and a UTF-8 byte order mark so accented
+        characters survive in Excel.</li>
+    <li><strong>Japanese, Chinese and Korean</strong> are rendered with an
+        embedded font instead of turning into unreadable characters.</li>
+  </ul>
+
+  <h2>Documents</h2>
+  <ul class="docs">
+    <li><a href="./eula.html">End User Licence Agreement</a></li>
+    <li><a href="./privacy.html">Privacy Policy</a></li>
+  </ul>
+
+  <h2>Support</h2>
+  <p>
+    Email <a href="mailto:support@groundedwp.com">support@groundedwp.com</a>.
+    Please include the app version and the JQL query you used; that is usually
+    enough to reproduce a problem.
+  </p>
+</main>
+</body>
+</html>

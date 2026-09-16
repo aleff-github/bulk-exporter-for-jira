@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Bulk Exporter for Jira</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<main>
+  <p class="back"><a href="./">&larr; Bulk Exporter for Jira</a></p>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Last updated: 16 September 2026</p>
+
+  <div class="callout">
+    <strong>In short:</strong> Bulk Exporter for Jira runs entirely inside
+    Atlassian's cloud. Your issue data is never sent to us, to our servers, or
+    to any third party. We cannot see it.
+  </div>
+
+  <h2>1. Who we are</h2>
+  <p>
+    Bulk Exporter for Jira ("the App") is developed and distributed by
+    Alessandro Greco ("we", "us"), contactable at
+    <a href="mailto:support@groundedwp.com">support@groundedwp.com</a>.
+  </p>
+  <p>
+    The App is distributed exclusively through the Atlassian Marketplace and is
+    installed by an administrator of your Atlassian site.
+  </p>
+
+  <h2>2. Where the App runs</h2>
+  <p>
+    The App is built on <strong>Atlassian Forge</strong> and carries the
+    <strong>Runs on Atlassian</strong> designation. This is not a marketing
+    claim but a technical constraint enforced by Atlassian: the App uses only
+    Atlassian-hosted compute and storage, and declares no external network
+    egress permissions in its manifest.
+  </p>
+  <p>
+    As a practical consequence, <strong>no data processed by the App ever
+    leaves Atlassian's infrastructure</strong>. There is no server operated by
+    us, no analytics service, no error-reporting service and no third-party
+    processor involved in the operation of the App.
+  </p>
+
+  <h2>3. What the App accesses</h2>
+  <p>
+    When an administrator installs the App, it requests the following Atlassian
+    permissions:
+  </p>
+  <table>
+    <tr><th>Permission</th><th>Why it is needed</th></tr>
+    <tr>
+      <td><code>read:jira-work</code></td>
+      <td>To read the issues you choose to export, including their summary,
+          description, comments, custom fields and attachments.</td>
+    </tr>
+    <tr>
+      <td><code>read:jira-user</code></td>
+      <td>To display assignee and reporter names in the exported file.</td>
+    </tr>
+    <tr>
+      <td><code>storage:app</code></td>
+      <td>To hold the export while it is being produced, and the finished file
+          until you download it.</td>
+    </tr>
+  </table>
+  <p>
+    The App requests <strong>no write permissions</strong>. It cannot create,
+    modify or delete anything in your Jira site.
+  </p>
+  <p>
+    The App only reads the issues matched by the JQL query that you type. It
+    does not scan your site, and it respects the permissions of the Atlassian
+    site it is installed on.
+  </p>
+
+  <h2>4. What the App stores, and for how long</h2>
+  <p>
+    Producing a large export takes several steps, so intermediate data is held
+    briefly in Atlassian-hosted storage:
+  </p>
+  <table>
+    <tr><th>Data</th><th>Where</th><th>Retention</th></tr>
+    <tr>
+      <td>Raw issue data for the batch being processed</td>
+      <td>Forge Object Store</td>
+      <td>Deleted immediately after that batch is rendered</td>
+    </tr>
+    <tr>
+      <td>Job state (query text, progress counters, status)</td>
+      <td>Forge Key-Value Store</td>
+      <td>Kept so you can check progress; contains no issue content</td>
+    </tr>
+    <tr>
+      <td>The finished export file</td>
+      <td>Forge Object Store</td>
+      <td>Automatically deleted after 7 days</td>
+    </tr>
+  </table>
+  <p>
+    Download links are pre-signed and expire one hour after they are generated.
+  </p>
+  <p>
+    All of this storage is provided by Atlassian and follows the data residency
+    configuration of your Atlassian site.
+  </p>
+
+  <h2>5. What we do not do</h2>
+  <ul>
+    <li>We do not collect, receive or store your issue data on any system we control.</li>
+    <li>We do not use analytics, telemetry or tracking of any kind inside the App.</li>
+    <li>We do not use your data to train machine learning models.</li>
+    <li>We do not sell, rent or share your data with anyone.</li>
+    <li>We do not place cookies. The App's interface uses no browser storage.</li>
+  </ul>
+
+  <h2>6. Support communications</h2>
+  <p>
+    If you contact us at <a href="mailto:support@groundedwp.com">support@groundedwp.com</a>,
+    we will process the contents of your message in order to answer it. Please
+    do not include confidential issue data in a support request; a description
+    of the problem and, where relevant, the app version are enough.
+  </p>
+  <p>
+    Billing and licensing are handled by Atlassian. We receive from Atlassian
+    only the commercial information needed to administer the licence. We do not
+    receive payment card details.
+  </p>
+
+  <h2>7. Your rights</h2>
+  <p>
+    Because we hold no personal data from your Jira site, requests to access,
+    correct or delete issue data should be directed to the administrator of
+    your Atlassian site, who controls that data. For any personal data
+    contained in support correspondence with us, you may contact us at the
+    address above to request access, correction or deletion.
+  </p>
+  <p>
+    Uninstalling the App removes its stored data in accordance with Atlassian's
+    app lifecycle.
+  </p>
+
+  <h2>8. Changes to this policy</h2>
+  <p>
+    If this policy changes, the revised version will be published at this
+    address with an updated date. Material changes affecting how data is
+    handled will also be noted in the App's Marketplace release notes.
+  </p>
+
+  <h2>9. Contact</h2>
+  <p>
+    Questions about this policy:
+    <a href="mailto:support@groundedwp.com">support@groundedwp.com</a>
+  </p>
+</main>
+</body>
+</html>
