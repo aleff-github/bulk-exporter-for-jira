@@ -5,5 +5,6 @@ per l'Atlassian Marketplace.
 
 - [End User Licence Agreement](https://aleff-github.github.io/bulk-exporter-for-jira/eula.html)
 - [Privacy Policy](https://aleff-github.github.io/bulk-exporter-for-jira/privacy.html)
+- [Security Policy](https://aleff-github.github.io/bulk-exporter-for-jira/security.html)
 
 Contatto supporto: support@groundedwp.com
