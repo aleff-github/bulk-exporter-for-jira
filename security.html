@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Security Policy — Bulk Exporter for Jira</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<main>
+  <p class="back"><a href="./">&larr; Bulk Exporter for Jira</a></p>
+  <h1>Security Policy</h1>
+  <p class="meta">Last updated: 6 October 2026</p>
+
+  <div class="callout">
+    <strong>Security by architecture:</strong> Bulk Exporter for Jira runs on
+    Atlassian Forge, uses Atlassian-hosted compute and storage, and declares no
+    external network egress. Jira data processed by the App does not leave
+    Atlassian's infrastructure.
+  </div>
+
+  <h2>1. Scope</h2>
+  <p>
+    This Security Policy describes the security practices used for Bulk Exporter
+    for Jira ("the App"), developed and distributed by Grounded.
+  </p>
+
+  <h2>2. Hosting and data handling</h2>
+  <p>
+    The App is built on <strong>Atlassian Forge</strong> and uses only
+    Atlassian-hosted compute and storage. The App does not operate an external
+    application server and does not declare external network egress permissions.
+  </p>
+  <p>
+    Jira issue data is accessed only when needed to perform an export requested
+    by the user. Intermediate issue data is stored temporarily in Forge Object
+    Store and deleted after the relevant processing batch is rendered. Finished
+    export files are automatically deleted after 12 hours. Download links are
+    pre-signed and expire after one hour.
+  </p>
+
+  <h2>3. Permissions and access control</h2>
+  <p>
+    The App requests only the permissions required to generate exports:
+  </p>
+  <table>
+    <tr><th>Permission</th><th>Purpose</th></tr>
+    <tr>
+      <td><code>read:jira-work</code></td>
+      <td>Read the Jira issues, fields, comments and attachments selected by the user's JQL query for inclusion in an export.</td>
+    </tr>
+    <tr>
+      <td><code>read:jira-user</code></td>
+      <td>Resolve Jira user information, such as assignee and reporter names, for display in exported files.</td>
+    </tr>
+    <tr>
+      <td><code>storage:app</code></td>
+      <td>Read and write the App's own Atlassian-hosted Forge storage for temporary job state, intermediate processing data and generated export files.</td>
+    </tr>
+  </table>
+  <p>
+    The App does <strong>not</strong> request write permissions to Jira data and
+    cannot create, modify or delete Jira issues, projects or other Jira content.
+    Access to Jira information remains subject to Atlassian and Jira permission
+    controls.
+  </p>
+
+  <h2>4. Authentication and secrets</h2>
+  <p>
+    The App relies on Atlassian's Forge platform and Jira authorization model.
+    End users are not required to provide the App with Atlassian Personal Access
+    Tokens, Atlassian account passwords, API keys or other shared authentication
+    secrets.
+  </p>
+
+  <h2>5. Encryption and transport security</h2>
+  <p>
+    Network communication used by the App is provided through Atlassian Forge
+    and Atlassian services. The App does not create a separate external data
+    channel or send Jira content to infrastructure operated by Grounded.
+    Protection of data within Forge, including platform transport and storage
+    controls, is provided by Atlassian's infrastructure.
+  </p>
+
+  <h2>6. Third parties, analytics and tracking</h2>
+  <p>
+    The App does not send Jira data to third-party processors. It does not use
+    third-party analytics, advertising, tracking or external error-reporting
+    services within the App.
+  </p>
+
+  <h2>7. Vulnerability management</h2>
+  <p>
+    Security issues affecting the App are assessed based on their potential
+    impact on confidentiality, integrity and availability. Confirmed
+    vulnerabilities are prioritized for remediation according to severity and
+    applicable Atlassian Marketplace security requirements. Dependencies and
+    application code may be updated when needed to address relevant security
+    issues.
+  </p>
+
+  <h2>8. Security incident response</h2>
+  <p>
+    If a security incident affecting the App is confirmed, we will investigate
+    the issue, take appropriate containment and remediation measures, and
+    coordinate with Atlassian where required. Affected customers will be
+    informed when notification is appropriate or required.
+  </p>
+
+  <h2>9. Security certifications</h2>
+  <p>
+    Grounded does not currently claim independent security certifications for
+    this App. The App relies on Atlassian Forge infrastructure for hosting,
+    execution and application storage.
+  </p>
+
+  <h2>10. Reporting a security issue</h2>
+  <p>
+    To report a suspected security vulnerability, email
+    <a href="mailto:support@groundedwp.com">support@groundedwp.com</a> with the
+    subject <strong>Security report — Bulk Exporter for Jira</strong>. Please
+    include enough information to reproduce or assess the issue, but do not send
+    confidential Jira data unless specifically requested through an appropriate
+    secure channel.
+  </p>
+
+  <h2>11. Changes to this policy</h2>
+  <p>
+    This policy may be updated as the App or its security practices change. The
+    current version will always be published at this address with an updated
+    revision date.
+  </p>
+</main>
+</body>
+</html>
