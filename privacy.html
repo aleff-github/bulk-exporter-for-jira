@@ -10,7 +10,7 @@
 <main>
   <p class="back"><a href="./">&larr; Bulk Exporter for Jira</a></p>
   <h1>Privacy Policy</h1>
-  <p class="meta">Last updated: 16 September 2026</p>
+  <p class="meta">Last updated: 6 October 2026</p>
 
   <div class="callout">
     <strong>In short:</strong> Bulk Exporter for Jira runs entirely inside
@@ -67,8 +67,10 @@
     </tr>
   </table>
   <p>
-    The App requests <strong>no write permissions</strong>. It cannot create,
-    modify or delete anything in your Jira site.
+    The App requests <strong>no write permissions to Jira data</strong>. It
+    cannot create, modify or delete Jira issues, projects or other Jira content.
+    The <code>storage:app</code> permission allows the App to read and write only
+    its own Atlassian-hosted Forge storage for temporary export processing.
   </p>
   <p>
     The App only reads the issues matched by the JQL query that you type. It
