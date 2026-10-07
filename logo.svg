@@ -1,26 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Bulk Exporter for Jira">
-  <!-- Fondo: quadrato stondato, leggibile anche a 32 px -->
-  <rect x="0" y="0" width="512" height="512" rx="112" fill="#0052CC"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Grounded Export for Jira">
+  <!-- Fondo: quadrato stondato, palette smeraldo (brand Grounded), distinta
+       dal blu Atlassian e dai cloni "exporter" -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0E7A57"/>
+      <stop offset="1" stop-color="#0A5A40"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="512" height="512" rx="112" fill="url(#bg)"/>
 
-  <!-- Pila di fogli: suggerisce il volume, non la singola issue -->
-  <rect x="150" y="84"  width="182" height="236" rx="14" fill="#FFFFFF" opacity="0.26"/>
-  <rect x="132" y="104" width="182" height="236" rx="14" fill="#FFFFFF" opacity="0.48"/>
-  <rect x="114" y="124" width="182" height="236" rx="14" fill="#FFFFFF"/>
+  <!-- Documento singolo (non una pila): silhouette diversa dal vecchio marchio -->
+  <rect x="120" y="100" width="210" height="300" rx="22" fill="#FFFFFF"/>
 
-  <!-- Righe di contenuto sul foglio in primo piano -->
-  <g fill="#0052CC">
-    <rect x="142" y="168" width="126" height="20" rx="10"/>
-    <rect x="142" y="208" width="126" height="20" rx="10"/>
-    <rect x="142" y="248" width="86"  height="20" rx="10"/>
+  <!-- Righe di contenuto: due smeraldo + una ambra come accento di brand -->
+  <g>
+    <rect x="152" y="156" width="146" height="22" rx="11" fill="#0A5A40"/>
+    <rect x="152" y="200" width="146" height="22" rx="11" fill="#0A5A40"/>
+    <rect x="152" y="244" width="96"  height="22" rx="11" fill="#F5A623"/>
   </g>
 
-  <!-- Pastiglia di export: il bordo bianco la stacca dalla pila -->
-  <circle cx="366" cy="370" r="92" fill="#FFFFFF"/>
-  <circle cx="366" cy="370" r="76" fill="#0052CC"/>
+  <!-- Pastiglia di export in ambra, con alone bianco per staccarla -->
+  <circle cx="372" cy="372" r="98" fill="#FFFFFF"/>
+  <circle cx="372" cy="372" r="82" fill="#F5A623"/>
 
-  <!-- Freccia verso il basso -->
-  <g fill="#FFFFFF">
-    <rect x="352" y="322" width="28" height="58" rx="8"/>
-    <path d="M 318 372 L 414 372 L 366 424 Z"/>
+  <!-- Freccia verso l'alto-destra: "export verso fuori", non download -->
+  <g transform="rotate(45 372 372)" fill="#0A5A40">
+    <rect x="358" y="368" width="28" height="56" rx="8"/>
+    <path d="M 340 374 L 404 374 L 372 332 Z"/>
   </g>
 </svg>
